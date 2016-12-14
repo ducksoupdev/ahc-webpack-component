@@ -1,0 +1,53 @@
+<!doctype html>
+<html data-ng-app="demoPage">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Webpack component
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ahc-webpack-component.min.css"/>
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body data-ng-controller="demoController">
+    <div class="container">
+        <div class="col-md-12">
+            <h1>Webpack component</h1>
+        </div>
+        <div class="col-md-12">
+            <h3>Requirements</h3>
+            <ul>
+                <li>Angular 1.4.x</li>
+            </ul>
+        </div>
+        <div class="col-md-12">
+            <h3>Examples</h3>
+            <my-directive></my-directive>
+        </div>
+        <div class="col-md-12">
+            <h3>Markup</h3>
+            <pre><code class="language-html">&lt;my-directive&gt;&lt;/my-directive&gt;</code></pre>
+        </div>
+        <div class="col-md-12">
+            <h3>Javascript</h3>
+            <pre><code class="language-javascript">angular.module("demoPage", ["ahcWebpackComponent"])
+    .controller("demoController", ["$scope", function($scope) {
+        $scope.other = "test";
+    }]);</code></pre>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.14/angular.min.js"></script>
+    <script src="js/ahc-webpack-component.min.js"></script>
+    <script>
+        angular.module("demoPage", ["ahcWebpackComponent"])
+            .controller("demoController", ["$scope", function($scope) {
+                $scope.other = "test";
+            }]);
+    </script>
+</body>
+
+</html>

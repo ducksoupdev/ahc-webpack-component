@@ -1,0 +1,12 @@
+{
+  "name": "ahc-webpack-component",
+  "dependencies": {},
+  "devDependencies": {},
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.4.0+20160308171320",
+    "angularjs/legacy/angular-mocks": "registry:dt/angularjs/legacy/angular-mocks#1.3.0+20160608104721",
+    "jasmine": "registry:dt/jasmine#2.5.0+20161025102649",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "node": "registry:dt/node#6.0.0+20161212163245"
+  }
+}

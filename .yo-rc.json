@@ -1,0 +1,10 @@
+{
+  "generator-ahc-component": {
+    "componentName": "ahc-webpack-component",
+    "componentDesc": "Webpack component",
+    "versionNumber": "0.1.0",
+    "installDependencies": true,
+    "componentNameCamel": "ahcWebpackComponent",
+    "isTypescriptComponent": true
+  }
+}

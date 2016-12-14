@@ -1,0 +1,26 @@
+{
+  "name": "ahc-webpack-component",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "scripts",
+    "src/ng-templates"
+  ],
+  "dependencies": {
+    "angular": "1.4"
+  },
+  "devDependencies": {
+    "jquery": "~3.1.1",
+    "angular-mocks": "~1.4",
+    "jasmine-jquery": "~2.1.1"
+  },
+  "resolutions": {
+    "angular": "~1.4"
+  }
+}
