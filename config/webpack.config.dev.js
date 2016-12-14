@@ -1,10 +1,9 @@
 const webpack = require("webpack"),
-    helpers = require("./config/helpers");
+    helpers = require("./helpers");
 
 let config = {
     entry: {
-        "ahc-webpack-component": helpers.root("/src/main.ts"),
-        "ahc-webpack-component.min": helpers.root("/src/main.ts")
+        "ahc-webpack-component": helpers.root("/src/main.ts")
     },
     output: {
         path: helpers.root("/dist/js"),
@@ -17,18 +16,10 @@ let config = {
     module: {
         loaders: [
             { test: /\.ts$/, exclude: /node_modules/, loader: "ts-loader" },
-            {
-                test: /\.html$/,
-                loader: "raw-loader",
-                exclude: ["./src/index.html"]
-            }
+            { test: /\.html$/, loader: "raw-loader", exclude: ["./src/index.html"] }
         ],
     },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            include: /\.min\.js$/, minimize: true
-        })
-    ],
+    plugins: [],
     ts: {
         compilerOptions: {
             declaration: false

@@ -1,5 +1,5 @@
 const parseArgs = require("minimist");
-let webpackConfig = require("./webpack.config");
+let webpackConfig = require("./config/webpack.config.coverage");
 
 let args = parseArgs(process.argv.slice(2), {
     string: ["env"],
@@ -7,17 +7,6 @@ let args = parseArgs(process.argv.slice(2), {
         "env": "mocha"
     }
 });
-
-webpackConfig.module.postLoaders = [
-    {
-        test: /\.ts$/,
-        loader: "istanbul-instrumenter-loader",
-        exclude: [
-            "node_modules",
-            /\.spec\.ts$/
-        ]
-    }
-];
 
 let reporters = ["mocha", "coverage"];
 let browsers = ["PhantomJS"];
@@ -46,19 +35,10 @@ module.exports = (config) => {
             "src/main.ts": ["webpack"],
             "src/test.ts": ["webpack"]
         },
-        webpack: {
-            devtool: "inline-source-map",
-            resolve: webpackConfig.resolve,
-            module: webpackConfig.module,
-            externals: webpackConfig.externals,
-            ts: {
-                compilerOptions: {
-                    inlineSourceMap: true,
-                    sourceMap: false
-                }
-            }
+        webpack: webpackConfig,
+        webpackServer: {
+            noInfo: true
         },
-        webpackServer: { noInfo: true },
         junitReporter: {
             outputDir: "reports/"
         },
