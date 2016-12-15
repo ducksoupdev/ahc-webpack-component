@@ -2,6 +2,10 @@
 
 This component is Webpack component
 
+## Dependencies
+
+* NodeJS >= v4.0.0
+
 ## Installation
 
 `bower install ahc-webpack-component --save`
